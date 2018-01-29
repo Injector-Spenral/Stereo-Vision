@@ -1,8 +1,14 @@
+"""
+This module calculates how far away an object is based on the angles it is in relation to 2 cameras,
+as well as the distance between the cameras. It also has another function(still in early testing) which
+could use multiple cameras to find the distanced more accurately
+"""
+
 import math
 
 distance = 200
 
-def degsin(num):
+def degsin(num): #This function makes it easier to use degrees with the math.sin() function, which normally uses radians
 	return math.sin(math.radians(num))
 
 def calculate(angle1, angle2, distance = 20):
