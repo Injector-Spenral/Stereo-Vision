@@ -6,10 +6,18 @@ could use multiple cameras to find the distanced more accurately
 
 import math
 
-distance = 200
-
 def degsin(num): #This function makes it easier to use degrees with the math.sin() function, which normally uses radians
 	return math.sin(math.radians(num))
+
+focal_length = 304
+horizontal_fov = 62.2
+vertical_fov = 48.8
+frame_width = 640
+frame_height = 480
+half = horizontal_fov / 2
+c = 180 - 90 - half
+distance = 200
+focal_width = degsin(half) * focal_length / degsin(c) * 2
 
 def calculate(angle1, angle2, distance = 20):
 	side1 = distance
